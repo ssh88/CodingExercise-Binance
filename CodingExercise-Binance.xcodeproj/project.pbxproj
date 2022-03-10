@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7E476E7D27D8AE8B0043758E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476E7C27D8AE8B0043758E /* main.swift */; };
+		7E476EED27D977BB0043758E /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476EEC27D977BB0043758E /* Tests.swift */; };
+		7E476EF127D977D20043758E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476E7C27D8AE8B0043758E /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +27,19 @@
 /* Begin PBXFileReference section */
 		7E476E7927D8AE8B0043758E /* CodingExercise-Binance */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CodingExercise-Binance"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E476E7C27D8AE8B0043758E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7E476EEA27D977BB0043758E /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E476EEC27D977BB0043758E /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7E476E7627D8AE8B0043758E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E476EE727D977BB0043758E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				7E476E7B27D8AE8B0043758E /* CodingExercise-Binance */,
+				7E476EEB27D977BB0043758E /* Tests */,
 				7E476E7A27D8AE8B0043758E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				7E476E7927D8AE8B0043758E /* CodingExercise-Binance */,
+				7E476EEA27D977BB0043758E /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +73,14 @@
 				7E476E7C27D8AE8B0043758E /* main.swift */,
 			);
 			path = "CodingExercise-Binance";
+			sourceTree = "<group>";
+		};
+		7E476EEB27D977BB0043758E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7E476EEC27D977BB0043758E /* Tests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +103,23 @@
 			productReference = 7E476E7927D8AE8B0043758E /* CodingExercise-Binance */;
 			productType = "com.apple.product-type.tool";
 		};
+		7E476EE927D977BB0043758E /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E476EEE27D977BB0043758E /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				7E476EE627D977BB0043758E /* Sources */,
+				7E476EE727D977BB0043758E /* Frameworks */,
+				7E476EE827D977BB0043758E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 7E476EEA27D977BB0043758E /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +131,9 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					7E476E7827D8AE8B0043758E = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					7E476EE927D977BB0043758E = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -111,9 +152,20 @@
 			projectRoot = "";
 			targets = (
 				7E476E7827D8AE8B0043758E /* CodingExercise-Binance */,
+				7E476EE927D977BB0043758E /* Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E476EE827D977BB0043758E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E476E7527D8AE8B0043758E /* Sources */ = {
@@ -121,6 +173,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E476E7D27D8AE8B0043758E /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E476EE627D977BB0043758E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E476EF127D977D20043758E /* main.swift in Sources */,
+				7E476EED27D977BB0043758E /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +327,38 @@
 			};
 			name = Release;
 		};
+		7E476EEF27D977BB0043758E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GW8ZTD585R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.desertmonkey.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7E476EF027D977BB0043758E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GW8ZTD585R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.desertmonkey.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -283,6 +376,15 @@
 			buildConfigurations = (
 				7E476E8127D8AE8B0043758E /* Debug */,
 				7E476E8227D8AE8B0043758E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E476EEE27D977BB0043758E /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E476EEF27D977BB0043758E /* Debug */,
+				7E476EF027D977BB0043758E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

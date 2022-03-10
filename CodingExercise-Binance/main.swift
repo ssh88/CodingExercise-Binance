@@ -27,11 +27,11 @@ class Stack<T> {
     }
 }
 
-typealias Transaction = [String: String]
-var transactions = Stack<Transaction>()
 
 
-struct TransactionProgram {
+public struct TransactionProgram {
+    typealias Transaction = [String: String]
+    var transactions = Stack<Transaction>()
     
     enum Command: String {
         case set = "SET"
@@ -146,12 +146,15 @@ extension TransactionProgram {
         transactions.append(transaction)
     }
     
-    func getValue(for key: String) {
+    @discardableResult
+    func getValue(for key: String) -> String {
         guard let value = transactions.peek()?[key] else {
-            print("key not set")
-            return
+            let errorMessage = "key not set"
+            print(errorMessage)
+            return errorMessage
         }
         print(value)
+        return value
     }
     
     func deleteKey(_ key: String) {
