@@ -10,6 +10,10 @@
 		7E476E7D27D8AE8B0043758E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476E7C27D8AE8B0043758E /* main.swift */; };
 		7E476EED27D977BB0043758E /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476EEC27D977BB0043758E /* Tests.swift */; };
 		7E476EF127D977D20043758E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476E7C27D8AE8B0043758E /* main.swift */; };
+		7E476EF327D979640043758E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476EF227D979640043758E /* Stack.swift */; };
+		7E476EF527D979C50043758E /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476EF427D979C50043758E /* TransactionManager.swift */; };
+		7E476EF627D9FD5F0043758E /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476EF427D979C50043758E /* TransactionManager.swift */; };
+		7E476EF727D9FD8B0043758E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476EF227D979640043758E /* Stack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +33,8 @@
 		7E476E7C27D8AE8B0043758E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7E476EEA27D977BB0043758E /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E476EEC27D977BB0043758E /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		7E476EF227D979640043758E /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		7E476EF427D979C50043758E /* TransactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				7E476E7C27D8AE8B0043758E /* main.swift */,
+				7E476EF427D979C50043758E /* TransactionManager.swift */,
+				7E476EF227D979640043758E /* Stack.swift */,
 			);
 			path = "CodingExercise-Binance";
 			sourceTree = "<group>";
@@ -172,7 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E476EF327D979640043758E /* Stack.swift in Sources */,
 				7E476E7D27D8AE8B0043758E /* main.swift in Sources */,
+				7E476EF527D979C50043758E /* TransactionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,8 +190,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E476EF727D9FD8B0043758E /* Stack.swift in Sources */,
 				7E476EF127D977D20043758E /* main.swift in Sources */,
 				7E476EED27D977BB0043758E /* Tests.swift in Sources */,
+				7E476EF627D9FD5F0043758E /* TransactionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
