@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		7E476E7D27D8AE8B0043758E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476E7C27D8AE8B0043758E /* main.swift */; };
-		7E476EED27D977BB0043758E /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476EEC27D977BB0043758E /* Tests.swift */; };
+		7E476EED27D977BB0043758E /* TransactionManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476EEC27D977BB0043758E /* TransactionManagerTests.swift */; };
 		7E476EF127D977D20043758E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476E7C27D8AE8B0043758E /* main.swift */; };
 		7E476EF327D979640043758E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476EF227D979640043758E /* Stack.swift */; };
 		7E476EF527D979C50043758E /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476EF427D979C50043758E /* TransactionManager.swift */; };
 		7E476EF627D9FD5F0043758E /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476EF427D979C50043758E /* TransactionManager.swift */; };
 		7E476EF727D9FD8B0043758E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E476EF227D979640043758E /* Stack.swift */; };
+		7E7EC85E27DA4138006299FE /* TransactionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EC85D27DA4138006299FE /* TransactionError.swift */; };
+		7E7EC85F27DA47D8006299FE /* TransactionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EC85D27DA4138006299FE /* TransactionError.swift */; };
+		7E7EC86127DA5A0D006299FE /* TransactionResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EC86027DA5A0D006299FE /* TransactionResultHandler.swift */; };
+		7E7EC86227DA5A0D006299FE /* TransactionResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EC86027DA5A0D006299FE /* TransactionResultHandler.swift */; };
+		7E7EC86527DAADA0006299FE /* DefaultTransactionResultHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EC86327DAADA0006299FE /* DefaultTransactionResultHandlerTests.swift */; };
+		7E7EC86827DAB431006299FE /* MockTransactionResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EC86627DAB431006299FE /* MockTransactionResultHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,9 +38,13 @@
 		7E476E7927D8AE8B0043758E /* CodingExercise-Binance */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CodingExercise-Binance"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E476E7C27D8AE8B0043758E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7E476EEA27D977BB0043758E /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E476EEC27D977BB0043758E /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		7E476EEC27D977BB0043758E /* TransactionManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionManagerTests.swift; sourceTree = "<group>"; };
 		7E476EF227D979640043758E /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		7E476EF427D979C50043758E /* TransactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionManager.swift; sourceTree = "<group>"; };
+		7E7EC85D27DA4138006299FE /* TransactionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionError.swift; sourceTree = "<group>"; };
+		7E7EC86027DA5A0D006299FE /* TransactionResultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResultHandler.swift; sourceTree = "<group>"; };
+		7E7EC86327DAADA0006299FE /* DefaultTransactionResultHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTransactionResultHandlerTests.swift; sourceTree = "<group>"; };
+		7E7EC86627DAB431006299FE /* MockTransactionResultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionResultHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,8 @@
 			children = (
 				7E476E7C27D8AE8B0043758E /* main.swift */,
 				7E476EF427D979C50043758E /* TransactionManager.swift */,
+				7E7EC86027DA5A0D006299FE /* TransactionResultHandler.swift */,
+				7E7EC85D27DA4138006299FE /* TransactionError.swift */,
 				7E476EF227D979640043758E /* Stack.swift */,
 			);
 			path = "CodingExercise-Binance";
@@ -86,7 +98,9 @@
 		7E476EEB27D977BB0043758E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				7E476EEC27D977BB0043758E /* Tests.swift */,
+				7E476EEC27D977BB0043758E /* TransactionManagerTests.swift */,
+				7E7EC86327DAADA0006299FE /* DefaultTransactionResultHandlerTests.swift */,
+				7E7EC86627DAB431006299FE /* MockTransactionResultHandler.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -181,6 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E476EF327D979640043758E /* Stack.swift in Sources */,
+				7E7EC86127DA5A0D006299FE /* TransactionResultHandler.swift in Sources */,
+				7E7EC85E27DA4138006299FE /* TransactionError.swift in Sources */,
 				7E476E7D27D8AE8B0043758E /* main.swift in Sources */,
 				7E476EF527D979C50043758E /* TransactionManager.swift in Sources */,
 			);
@@ -192,7 +208,11 @@
 			files = (
 				7E476EF727D9FD8B0043758E /* Stack.swift in Sources */,
 				7E476EF127D977D20043758E /* main.swift in Sources */,
-				7E476EED27D977BB0043758E /* Tests.swift in Sources */,
+				7E7EC86827DAB431006299FE /* MockTransactionResultHandler.swift in Sources */,
+				7E7EC85F27DA47D8006299FE /* TransactionError.swift in Sources */,
+				7E476EED27D977BB0043758E /* TransactionManagerTests.swift in Sources */,
+				7E7EC86227DA5A0D006299FE /* TransactionResultHandler.swift in Sources */,
+				7E7EC86527DAADA0006299FE /* DefaultTransactionResultHandlerTests.swift in Sources */,
 				7E476EF627D9FD5F0043758E /* TransactionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
