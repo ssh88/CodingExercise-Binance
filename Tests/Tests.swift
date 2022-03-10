@@ -8,7 +8,6 @@
 import XCTest
 @testable import CodingExercise_Binance
 
-
 class Tests: XCTestCase {
     
     // system under test
@@ -23,7 +22,7 @@ class Tests: XCTestCase {
         sut = nil
         super.tearDown()
     }
-    
+
     func test_set_get()  {
         var result = sut.getValue(for: "foo")
         XCTAssertEqual(result, "key not set")
@@ -59,10 +58,10 @@ class Tests: XCTestCase {
         sut.beginTransaction()
         sut.set(key: "foo", value: "456")
         sut.commitTransaction()
-       
+
         var result = sut.rollbackTransaction()
         XCTAssertEqual(result, "no transaction")
-        
+
         result = sut.getValue(for: "foo")
         XCTAssertEqual(result, "456")
     }

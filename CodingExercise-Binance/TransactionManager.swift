@@ -82,26 +82,12 @@ extension TransactionManager {
         new[TransactionKey.valid.rawValue] = "1"
         transactions.append(new)
     }
-    
     @discardableResult
     func rollbackTransaction() -> String? {
         var temp = [Transaction]()
-        var canRollBack = false
-        
-        while canRollBack == false {
-            // find transaction that we can rollback
-            if let transaction = transactions.peek() {
-                if transaction[TransactionKey.completed.rawValue] == "1" {
-                    // if a transaction is completed, we cant roll this back so we temporarily pop it
-                    temp.append(transactions.pop()!)
-                } else {
-                    canRollBack = true
-                }
-            }
-        }
         
         var errorMessage: String? = nil
-        if canRollBack {
+        if let _ = transactionToRollback(temp: &temp)        {
             // the last item in the stack should be the one we want to rollback
             let _ = transactions.pop()
         } else {
@@ -114,6 +100,21 @@ extension TransactionManager {
             transactions.append(transaction)
         }
         return errorMessage
+    }
+    
+    /**
+     Recursively traverse the stack to find a transaction that is not completed, so we can rollback
+     */
+    func transactionToRollback(temp: inout [Transaction]) -> Transaction? {
+        if let transaction = transactions.peek() {
+            guard transaction[TransactionKey.completed.rawValue] == nil else {
+                temp.append(transactions.pop()!)
+                return transactionToRollback(temp: &temp)
+            }
+            return transaction
+        } else {
+            return nil
+        }
     }
     
     @discardableResult
