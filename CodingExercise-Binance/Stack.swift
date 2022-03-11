@@ -10,7 +10,7 @@ import Foundation
 class Stack<T> {
     private var storage = [T]()
     
-    func append(_ element: T) {
+    func push(_ element: T) {
         storage.append(element)
     }
     

@@ -96,7 +96,7 @@ extension TransactionManager {
     private func beginTransaction() {
         var new = Transaction()
         new[TransactionKey.valid.rawValue] = "1"
-        transactions.append(new)
+        transactions.push(new)
     }
     
     private func rollbackTransaction() -> TransactionResult {
@@ -114,7 +114,7 @@ extension TransactionManager {
         
         // finally add the completed transactions back
         for transaction in temp {
-            transactions.append(transaction)
+            transactions.push(transaction)
         }
         return result
     }
@@ -145,7 +145,7 @@ extension TransactionManager {
             return .failure(.noTransaction)
         }
         transaction[TransactionKey.completed.rawValue] = "1"
-        transactions.append(transaction)
+        transactions.push(transaction)
         return .success(nil)
     }
 }
@@ -160,7 +160,7 @@ extension TransactionManager {
             transaction = current
         }
         transaction[key] = value
-        transactions.append(transaction)
+        transactions.push(transaction)
     }
     
     private func getValue(for key: String) -> TransactionResult {
@@ -175,7 +175,7 @@ extension TransactionManager {
             return .failure(.noTransaction)
         }
         transaction[key] = nil
-        transactions.append(transaction)
+        transactions.push(transaction)
         return .success(nil)
     }
 }
