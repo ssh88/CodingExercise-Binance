@@ -10,7 +10,6 @@ import Foundation
 print("Start a transaction by using the 'BEGIN' command")
 print("use 'help' for a list of commands")
 print("----------------------------------------")
-print("use 'exit' to terminate")
 print("")
 
 TransactionManager().processCommand()
