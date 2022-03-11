@@ -5,15 +5,15 @@
 The solution to the coding task was created using Xcode's Command Line project template. This enabled me to create a simple Swift script and executable to run the program in the Command-Line.
 
 ## Usuage
-You can use the program in either in the Command-Line or Xcode.
+You can use the program either in the Command-Line or Xcode.
 
 ### Command Line
-<img width="500" alt="Screenshot 2022-03-11 at 00 04 00" src="https://user-images.githubusercontent.com/3674185/157776093-e2f66d65-7d10-4291-8470-870e7be88f1b.png">
 
 To use via Command Line, open up your command line app, navigate to the root directory of the project and either run `.\binance` or open up the `binance` shell.
 
+<img width="500" alt="Screenshot 2022-03-11 at 00 04 00" src="https://user-images.githubusercontent.com/3674185/157776093-e2f66d65-7d10-4291-8470-870e7be88f1b.png">
+
 ### Xcode
-<img width="500" alt="Screenshot 2022-03-10 at 22 41 16" src="https://user-images.githubusercontent.com/3674185/157767094-f9cac9ea-2ab5-4b11-8be5-471d0cedb1d6.png">
 
 To use inside Xcode, navigate to the root directory of the project:
 
@@ -24,6 +24,8 @@ To use inside Xcode, navigate to the root directory of the project:
 
 You can now interact with the program in the Xcode console.
 
+<img width="500" alt="Screenshot 2022-03-10 at 22 41 16" src="https://user-images.githubusercontent.com/3674185/157767094-f9cac9ea-2ab5-4b11-8be5-471d0cedb1d6.png">
+
 
 ## Implementation
 
@@ -31,7 +33,7 @@ The core parts of the implementation are as follows:
 
 ### Stack
 
-I created a simple Stack object to manage the transactions. This gave me a simple mechanism to push and pop transactions. It also gave me the ability to peek for such commands as counting and getting.
+I created a simple Stack object to manage the transactions. This gave me a simple mechanism to push and pop transactions. It also gave me the ability to look up a transaction via the peek function for the `COUNT` and `GET` commands.
 
 ```swift
 class Stack<T> {
@@ -58,7 +60,7 @@ class Stack<T> {
 
 ### Enum's
 
-For the transaction commands, I use an enum to provide a friendly API and avoid stringly-typed codebase!
+For the transaction commands, I use an enum to provide a friendly API and avoid a stringly-typed codebase!
 
 ```swift
 enum Command: String {
@@ -105,7 +107,8 @@ enum TransactionError: Error, LocalizedError {
 
 ### Begining and Committing Transactions
 
-One of the more complicated parts of the task requirements was to be able to only commit a transaction if the `BEGIN` command had been previously used. To achieve this, anytime the `BEGIN` command is used, a new transaction object is created and set with the key `valid`, this is then pushed onto the stack. 
+One of the more complicated parts of the task requirements was to be able to only commit a transaction if the `BEGIN` command had been previously used.   
+To achieve this, anytime the `BEGIN` command is used, a new transaction object is created and set with the key `valid`, this is then pushed onto the stack. 
 
 ```swift
 private func beginTransaction() {
@@ -132,7 +135,8 @@ private func commitTransaction() -> TransactionResult {
 }
 
 ```
-Once a transaction is committed, it is marked as completed by setting a `completed` key on it. This is important as another requirement was we can only roll back incomplete transactions.  
+Once a transaction is committed, it is marked as completed by setting a `completed` key on it.   
+This is important as another requirement was we can only roll back incomplete transactions.  
 So setting a `completed` key ensures that when the `ROLLBACK` command is used, we do not roll back completed transactions.
 
 
@@ -207,7 +211,7 @@ private func transactionInput(from input: String?) -> String? {
 }
 ```
 
-Using dependency injection and protocols allowed me to reach a 96% code coverage.
+Using dependency injection and protocols allowed me to reach a 97%~ code coverage.
 
 <img width="565" alt="Screenshot 2022-03-10 at 22 34 16" src="https://user-images.githubusercontent.com/3674185/157766900-5c7592cb-7f65-4798-bf78-5bc4a0a02ad0.png">
 
